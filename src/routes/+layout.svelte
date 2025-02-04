@@ -81,6 +81,7 @@
 	  transition: flex 0.5s ease;
 	  text-align: center;
 	  position: relative;
+	  border: none; /* Ensure they are non-interactive */
 	}
   
 	.left {
@@ -196,12 +197,12 @@
 		{/if}
 	  </div>
 	  <div class="split-screen">
-		<div class="left" on:click={() => switchSection('careWorker')}>
+		<button class="left" on:click={() => switchSection('careWorker')} aria-label="Care Worker">
 		  <h1>Care Worker</h1>
-		</div>
-		<div class="right" on:click={() => switchSection('webDeveloper')}>
+		</button>
+		<button class="right" on:click={() => switchSection('webDeveloper')} aria-label="Web Developer">
 		  <h1>Web Developer</h1>
-		</div>
+		</button>
 	  </div>
 	{:else if selectedSection === 'careWorker'}
 	  <CareWorkerDetails on:back={goBack} />
