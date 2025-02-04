@@ -7,6 +7,8 @@
 	import WebDeveloper from '../WebDeveloper.svelte';
 	import CareWorkerDetails from '../CareWorkerDetails.svelte';
 	import WebDeveloperDetails from '../WebDeveloperDetails.svelte';
+	export const prerender = true;
+
   
 	let selectedSection = 'none';
 	let language = 'en';
